@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
+  <title id="title">MG monogram</title>
+  <rect width="64" height="64" rx="16" fill="#171a21"/>
+  <path d="M13 45V19h5.5l8.2 13.2L35 19h5.4v26h-6V29.1l-7.5 11.7h-.6l-7.4-11.7V45H13Z" fill="#f5f7fb"/>
+  <path d="M52.5 29.5a11.8 11.8 0 1 0 0 15.1V35h-9.2v5h3.6v2.2a6.2 6.2 0 1 1 1.6-8.8l4-3.9Z" fill="#2f83f7"/>
+</svg>

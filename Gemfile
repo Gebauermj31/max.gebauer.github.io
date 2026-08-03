@@ -1,13 +1,12 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-group :jekyll_plugins do
-  gem 'jekyll'
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jemoji'
-  gem 'webrick', '~> 1.8'
-end
+gem "github-pages", "232", group: :jekyll_plugins
+gem "jekyll-redirect-from"
+gem "jekyll-seo-tag"
+gem "jekyll-sitemap"
+gem "webrick", "~> 1.8"
 
-gem 'github-pages'
-gem 'connection_pool', '2.5.0'
+# Ruby 3.3 no longer bundles these standard-library gems by default.
+gem "bigdecimal"
+gem "connection_pool", "2.5.0"
+gem "csv"
