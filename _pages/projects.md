@@ -1,9 +1,9 @@
 ---
-title: Projects
+title: Statistics Projects
 permalink: /projects/
-section: Projects
+section: Statistics Projects
 eyebrow: Reproducible applied research
-lede: These projects show how I translate conceptual questions into statistical designs—defining the target carefully, separating development from evaluation, and communicating both gains and limitations.
+lede: Below are a selection of projects highlighting different areas of my statistics and analytics research across the NFL, MLB, and public health.
 ---
 
 <h2 id="project-case-studies" class="sr-only">Project case studies</h2>

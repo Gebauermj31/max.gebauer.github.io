@@ -10,10 +10,10 @@ sitemap: false
 - [Home]({{ '/' | relative_url }})
 - [Research]({{ '/research/' | relative_url }})
 - [Teaching]({{ '/teaching/' | relative_url }})
-- [Projects]({{ '/projects/' | relative_url }})
+- [Statistics Projects]({{ '/projects/' | relative_url }})
 - [CV]({{ '/cv/' | relative_url }})
 
-## Project case studies
+## Statistics project case studies
 
 {% assign ordered_projects = site.projects | sort: "featured_order" %}
 {% for project in ordered_projects %}

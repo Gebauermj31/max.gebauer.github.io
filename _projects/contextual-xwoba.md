@@ -27,7 +27,7 @@ reproduce_url: https://max-gebauer.github.io/fair-xwoba/reproduce.html
 permalink: /projects/fair-xwoba/
 redirect_from:
   - /projects/contextual-xwoba/
-section: Projects
+section: Statistics Projects
 ---
 
 ## The question

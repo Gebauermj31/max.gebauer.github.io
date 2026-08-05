@@ -281,7 +281,7 @@ def build():
         ),
     ]
 
-    story += section("Selected talks")
+    story += section("Talks, Presentations, and Invited Lectures")
     story += [
         entry('"Approximating Posterior Distributions with Variational Bayes"', "2025", "Applied Bayesian Modeling."),
         entry(

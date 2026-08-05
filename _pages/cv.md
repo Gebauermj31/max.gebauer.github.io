@@ -43,7 +43,7 @@ updated: August 5, 2026
 
 <div class="cv-item"><div><h3>Teaching Assistant, Wharton Moneyball Academy</h3><p>Advised high school student projects in sports statistics and provided coding and analytical support in the Philadelphia and San Francisco programs.</p></div><div class="cv-date">Summer 2025</div></div>
 
-## Selected talks
+## Talks, Presentations, and Invited Lectures
 
 <div class="cv-item"><div><h3>“Approximating Posterior Distributions with Variational Bayes”</h3><p>Applied Bayesian Modeling</p></div><div class="cv-date">2025</div></div>
 <div class="cv-item"><div><h3>“A Dynamic Rating Scheme for NFL Pass Rushers”</h3><p>New England Symposium for Statistics in Sports; Wharton Sport Analytics and Business Summit</p></div><div class="cv-date">2025</div></div>

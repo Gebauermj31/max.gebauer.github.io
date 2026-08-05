@@ -19,7 +19,7 @@ canonical_label: Read the preprint
 repository_url: https://github.com/WhartonSABI/nfl-elo
 release_label: arXiv:2604.01491v1
 release_date: 2026-04-02
-section: Projects
+section: Statistics Projects
 ---
 
 ## Public working paper
