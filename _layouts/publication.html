@@ -1,0 +1,15 @@
+---
+layout: default
+---
+<article class="page-shell">
+  <header class="page-intro measure-wide">
+    <a class="back-link" href="{{ '/research/' | relative_url }}">← Research</a>
+    <p class="eyebrow">{{ page.status }} · {{ page.venue }}</p>
+    <h1>{{ page.title }}</h1>
+    <p class="citation">{{ page.citation }}</p>
+    {% if page.expected_publication %}<p class="publication-timing">Expected final publication: {{ page.expected_publication }}</p>{% endif %}
+  </header>
+  <div class="prose measure-wide">
+    {{ content }}
+  </div>
+</article>

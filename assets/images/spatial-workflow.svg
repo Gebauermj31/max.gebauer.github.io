@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="480" viewBox="0 0 720 480" role="img" aria-labelledby="t d">
+  <title id="t">Spatial epidemiology workflow</title><desc id="d">County controls are selected along outcome and exposure paths, combined with spatial structure, and evaluated.</desc>
+  <rect width="720" height="480" rx="28" fill="#f4f7fb"/>
+  <text x="48" y="57" fill="#075fd8" font-family="monospace" font-size="15" font-weight="700" letter-spacing="2">CONTROL SELECTION WITH GEOGRAPHIC STRUCTURE</text>
+  <g font-family="Arial, sans-serif">
+    <rect x="48" y="96" width="165" height="105" rx="14" fill="#fff" stroke="#c9d6e8" stroke-width="2"/><text x="70" y="130" fill="#171a21" font-size="18" font-weight="700">County data</text><text x="70" y="158" fill="#566174" font-size="14">many candidate</text><text x="70" y="179" fill="#566174" font-size="14">controls</text>
+    <rect x="278" y="81" width="190" height="62" rx="12" fill="#dceaff" stroke="#075fd8"/><text x="373" y="117" text-anchor="middle" fill="#075fd8" font-size="16" font-weight="700">Exposure selection</text>
+    <rect x="278" y="164" width="190" height="62" rx="12" fill="#dceaff" stroke="#075fd8"/><text x="373" y="200" text-anchor="middle" fill="#075fd8" font-size="16" font-weight="700">Outcome selection</text>
+    <path d="M213 137h65M213 164h65" stroke="#075fd8" stroke-width="3"/>
+    <path d="M468 112h50v64h-50" fill="none" stroke="#075fd8" stroke-width="3"/>
+    <rect x="518" y="115" width="154" height="82" rx="12" fill="#171a21"/><text x="595" y="150" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">Union of</text><text x="595" y="175" text-anchor="middle" fill="#fff" font-size="17" font-weight="700">selected controls</text>
+    <path d="M595 197v48" stroke="#075fd8" stroke-width="3"/>
+    <rect x="218" y="245" width="377" height="76" rx="14" fill="#fff" stroke="#c9d6e8" stroke-width="2"/><text x="407" y="277" text-anchor="middle" fill="#171a21" font-size="18" font-weight="700">Estimating model + spatial controls</text><text x="407" y="300" text-anchor="middle" fill="#566174" font-size="14">make geographic dependence explicit</text>
+    <path d="M407 321v43" stroke="#075fd8" stroke-width="3"/>
+    <g text-anchor="middle" font-size="15" font-weight="700"><rect x="110" y="364" width="150" height="64" rx="12" fill="#dceaff"/><text x="185" y="402" fill="#075fd8">Validation</text><rect x="285" y="364" width="150" height="64" rx="12" fill="#dceaff"/><text x="360" y="402" fill="#075fd8">Sensitivity</text><rect x="460" y="364" width="150" height="64" rx="12" fill="#dceaff"/><text x="535" y="402" fill="#075fd8">Interpretation</text></g>
+  </g>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="t d">
+  <title id="t">Maximilian (Max) J. Gebauer</title><desc id="d">Transdisciplinary researcher in philosophy of science, statistics, and sports analytics.</desc>
+  <rect width="1200" height="630" fill="#f5f7fb"/>
+  <path d="M0 0h395v630H0z" fill="#171a21"/>
+  <circle cx="198" cy="315" r="126" fill="none" stroke="#2f83f7" stroke-width="3"/>
+  <path d="M98 377V251h26l39 63 40-63h26v126h-29v-77l-35 57h-3l-35-57v77H98Z" fill="#fff"/>
+  <path d="M290 296a58 58 0 1 0 0 75v-48h-46v25h18v11a30 30 0 1 1 8-42l20-21Z" fill="#2f83f7"/>
+  <text x="470" y="230" fill="#075fd8" font-family="monospace" font-size="24" font-weight="700" letter-spacing="3">RESEARCH · METHODS · APPLICATIONS</text>
+  <text x="470" y="314" fill="#171a21" font-family="Arial, sans-serif" font-size="47" font-weight="700">Maximilian (Max) J. Gebauer</text>
+  <text x="470" y="380" fill="#566174" font-family="Arial, sans-serif" font-size="29">Philosophy of science, statistics,</text>
+  <text x="470" y="420" fill="#566174" font-family="Arial, sans-serif" font-size="29">and sports analytics.</text>
+</svg>
