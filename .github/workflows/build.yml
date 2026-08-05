@@ -21,4 +21,4 @@ jobs:
       - name: Build with strict front matter
         run: bundle exec jekyll build --strict_front_matter
       - name: Check HTML, links, assets, privacy markers, and PDF
-        run: bundle exec ruby scripts/check_site.rb
+        run: RELEASE_READY=1 bundle exec ruby scripts/check_site.rb

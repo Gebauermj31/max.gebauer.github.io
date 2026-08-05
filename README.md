@@ -1,8 +1,8 @@
-# Maximilian J. Gebauer — academic website
+# Maximilian (Max) J. Gebauer — academic website
 
-This repository contains the source for Maximilian J. Gebauer’s academic website. It is a deliberately small Jekyll site: five primary pages, three project case studies, one publication entry, and a single downloadable CV.
+This repository contains the source for Maximilian (Max) J. Gebauer’s academic website. It is a deliberately small Jekyll site: five primary pages, three project case studies, one publication entry, a downloadable CV, and an approved M.A. thesis PDF.
 
-The site is designed for GitHub Pages compatibility, but the production `url` remains unset until the domain decision. Deployment is also intentionally blocked until the canonical contextual-xwOBA GitHub repository and Quarto results site are public.
+The site is designed for and will use the free GitHub Pages address at `https://max-gebauer.github.io`. No custom domain or `CNAME` configuration is planned for version 1. Deployment remains a deliberate final-review action; the canonical FAIR xwOBA repository and Quarto article are public and wired into the project page.
 
 ## Supported local workflow
 
@@ -28,9 +28,12 @@ bundle exec ruby scripts/check_site.rb
 - Edit publication entries in `_publications/`.
 - Follow the front-matter examples in [`CONTENT_GUIDE.md`](CONTENT_GUIDE.md).
 - Keep `/files/maximilian-gebauer-cv.pdf` synchronized with the accessible HTML CV.
+- Keep `/files/maximilian-gebauer-statistics-thesis.pdf` synchronized with the approved public thesis version.
 - Do not add raw research data, row-level predictions, fitted models, confidential client material, or unapproved figures.
 
-Before a public deployment, add the xwOBA canonical repository and Quarto URLs to `_projects/contextual-xwoba.md`, set `RELEASE_READY=1`, and run the checks. Update the release label, summary, aggregate figure, and both source links together.
+After changing the CV, rebuild its privacy-reviewed PDF with `python3 scripts/build_cv_pdf.py` (ReportLab required), then review the rendered pages before committing it.
+
+Before a public deployment, set `RELEASE_READY=1` and run the checks. Update the FAIR xwOBA release label, evidence status, summary, aggregate figure, and source links together whenever its canonical release changes.
 
 ## Design system
 

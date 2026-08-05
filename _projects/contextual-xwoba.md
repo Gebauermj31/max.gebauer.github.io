@@ -1,56 +1,77 @@
 ---
-title: Contextual xwOBA
-subtitle: A public, reproducible challenger to Statcast expected weighted on-base average
-summary: A player-agnostic model of contact outcomes that improves point prediction while making its remaining calibration limits visible.
-status: Reproducible modeling study
+title: FAIR xwOBA
+subtitle: A baseball model for expected contact value · Field- and Atmosphere-Informed Realized-contact xwOBA
+summary: A public, player-trait-free baseball model that predicts the value of a batted ball, validates it across rolling held-out MLB seasons, and uses residuals to study Sprint Speed.
+status: Public release · rolling development evidence
 featured_order: 1
 methods:
-  - Gradient-boosted trees
-  - Multiclass probabilities
-  - Temporal validation
-  - Calibration diagnostics
+  - Five-class XGBoost
+  - Rolling held-out evaluation
+  - Probability and scalar calibration
+  - Post-score residual analysis
 card_image: /assets/images/project-xwoba.svg
-card_alt: Abstract baseball-field geometry with batted-ball trajectories and a calibration curve
+card_alt: Abstract baseball field with batted-ball trajectories and a calibration curve representing FAIR xwOBA
 hero_image: /assets/images/xwoba-workflow.svg
-hero_alt: Workflow from contact physics and game context through temporal model development to aggregate public evaluation
-hero_caption: Original conceptual workflow. The public release contains aggregate evidence only; raw Statcast data, row-level predictions, and fitted models are excluded.
-release_label: v1 evaluated candidate
-release_date: 2026-08-03
+hero_alt: Baseball workflow in which batted-ball, park, weather, and defensive features enter an XGBoost classifier; five outcome probabilities combine into scalar xwOBA; both outputs are calibrated and evaluated, while scalar predictions are residualized for a post-score Sprint Speed analysis
+hero_caption: End-to-end FAIR xwOBA workflow. Blue shows player-trait-free prediction and evaluation; gold shows the post-score residual analysis, where Sprint Speed enters only after predictions are fixed.
+hero_wide: true
+hero_width: 1200
+hero_height: 800
+release_label: FAIR xwOBA v0.1.0
+release_date: 2026-08-05
+project_url: https://max-gebauer.github.io/fair-xwoba/
+canonical_label: Read the published article
+repository_url: https://github.com/Max-Gebauer/fair-xwoba
+methods_url: https://max-gebauer.github.io/fair-xwoba/methods.html
+reproduce_url: https://max-gebauer.github.io/fair-xwoba/reproduce.html
+permalink: /projects/fair-xwoba/
+redirect_from:
+  - /projects/contextual-xwoba/
 section: Projects
 ---
 
 ## The question
 
-Statcast xwOBA estimates the expected offensive value of contact. This study asks a narrower, testable question: can a transparent, reproducible model predict contact outcomes using the physical and environmental context of the batted ball, while deliberately excluding player identity and player traits?
+In baseball, weighted on-base average (wOBA) summarizes offensive value by assigning more credit to outcomes such as doubles and home runs than to singles. An expected wOBA model—xwOBA—asks what a batted ball was likely to be worth based on how it was hit and the context around it, before focusing on the outcome that happened to occur.
 
-The model uses contact geometry, spray direction, a hang-time proxy, park and roof context, weather exposures, and rule era. It does **not** use sprint speed, age, height, weight, player identity, position, handedness, hit distance, batted-ball class, or realized play outcomes as predictors. That boundary is a design commitment, not a feature-selection accident.
+FAIR xwOBA asks two connected questions: can a public model predict that contact value more accurately and calibrate it more consistently by using richer physical and game context, and what repeatable player value remains in the residuals after doing so?
 
-## Design before comparison
+The name stands for **Field- and Atmosphere-Informed Realized-contact xwOBA**. “Realized-contact” is deliberate: the model estimates what a batted ball was worth in the physical, environmental, and pre-pitch defensive context in which it occurred rather than claiming to isolate a context-free essence of contact quality.
 
-The development timeline is locked by season. Data from 2015–2023 form the training period. Whole 2024 games are divided into disjoint tuning and calibration sets. The final comparison is made on matched 2025 contact, with prior exploratory exposure to that season disclosed. Partial 2026 data are reserved for monitoring rather than model selection.
+## Public model contract
 
-This ordering matters: selection, calibration, and testing answer different questions, and combining them would make the apparent performance easier to overstate.
+FAIR predicts five contact outcomes—out, single, double, triple, and home run—using a regularized XGBoost model. Its inputs cover launch speed and angle, spray coordinates, a hang-time proxy, park, temperature, field-relative wind, roof status, rule era, and pre-pitch infield and outfield alignment. Separate probability and scalar calibration stages protect both the outcome distribution and the xwOBA scale.
 
-## What the current evaluation shows
+The predictor cannot use player identity, name, Sprint Speed, age, height, weight, handedness, position, team, or fielder identity. Those fields are joined only after predictions have been written and hashed. Pre-pitch alignment is a contextual input, but it can indirectly encode how defenses respond to known hitters; the release discloses that limitation rather than describing the model as purely intrinsic.
 
-<div class="metric-row wide" aria-label="Selected 2025 test metrics">
-  <div class="metric"><strong>120,410</strong><span>matched 2025 contacts</span></div>
-  <div class="metric"><strong>0.386</strong><span>contextual v1 RMSE</span></div>
-  <div class="metric"><strong>0.439</strong><span>Statcast RMSE on the same rows</span></div>
+## Rolling evaluation
+
+The public evidence uses six rolling held-out development seasons from 2019 through 2024. For each target season, training stops before the preceding season; disjoint whole-game groups from the prior season are used for tuning and probability calibration, and prior out-of-fold predictions support scalar calibration. Only after those stages are fixed is the next season scored.
+
+This approximates repeated historical deployment and avoids a random split that would blur the direction of time. It is still **development evidence**, not the final untouched-season confirmation. The release design reserves 2026 for that later role.
+
+## What the release shows
+
+<div class="metric-row wide" aria-label="Selected rolling development metrics">
+  <div class="metric"><strong>2019–2024</strong><span>six rolling held-out seasons</span></div>
+  <div class="metric"><strong>0.3892</strong><span>FAIR equal-season RMSE</span></div>
+  <div class="metric"><strong>0.4376</strong><span>Statcast equal-season RMSE</span></div>
 </div>
-On the frozen 2025 comparison, contextual v1 has lower RMSE and MAE than Statcast. The paired RMSE difference is −0.0532, with a 95% bootstrap interval from −0.0551 to −0.0514. That is strong evidence of better **point prediction on this evaluation set**—not a blanket claim that the model is better in every respect.
+Across the six rolling development seasons, FAIR has lower RMSE, five-class log loss, Brier score, absolute annual bias, and mean absolute decile calibration gap than the declared Statcast comparators in every season. Equal-season averages are 0.3892 versus 0.4376 for RMSE, 0.5053 versus 0.7140 for log loss, 0.2920 versus 0.3846 for Brier score, 0.0059 versus 0.0139 for absolute annual bias, and 0.0099 versus 0.0151 for the decile calibration gap.
 
-The model does not pass its combined promotion rule. Its mean residual is −0.0189 and its mean absolute decile calibration gap is 0.0189, compared with 0.0103 for Statcast. In plain language: the predictions are closer on average, but their level and calibration still need work.
+This is not a strictly like-for-like contest: FAIR uses a richer contextual feature set than Statcast publicly describes, while Statcast's full model is proprietary. The result supports a qualified claim about accuracy and calibration across this rolling development evaluation, not universal superiority or final confirmation.
 
 <figure class="result-figure wide">
-  <img src="{{ '/assets/images/xwoba-annual-residual-calibration.png' | relative_url }}" alt="Line chart of annual mean residuals for contextual xwOBA and Statcast from 2019 through 2025. Contextual xwOBA remains mostly below zero, while Statcast remains above zero in most seasons." width="1440" height="810" loading="lazy">
-  <figcaption>Annual residual calibration from the aggregate v1 release. Values nearer zero indicate better calibration. This figure is included because it exposes the model’s central limitation rather than hiding it behind the point-prediction gain.</figcaption>
+  <a href="https://max-gebauer.github.io/fair-xwoba/"><img src="{{ '/assets/images/fair-xwoba-performance.png' | relative_url }}" alt="Five line-chart panels compare FAIR xwOBA with Statcast from 2019 through 2024 on RMSE, log loss, Brier score, absolute annual bias, and decile calibration gap. FAIR is lower in every season and panel." width="2016" height="1420" loading="lazy"></a>
+  <figcaption>Rolling held-out development evaluation, 2019–2024. Lower is better throughout. Reused from <a href="https://max-gebauer.github.io/fair-xwoba/">FAIR xwOBA v0.1.0</a> under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</figcaption>
 </figure>
 
-## A gated replacement study
+## What the residuals reveal
 
-A v2 replacement study is implemented behind frozen promotion criteria. It should not be described as the public winner unless it passes those criteria on the held-out evaluation. Until then, v1 remains the evaluated reference and v2 remains a candidate under study.
+After scoring, the release asks whether deliberately excluded player traits organize the remaining error. One Sprint Speed standard deviation—1.39 feet per second—is associated with 0.799 run-equivalent units per 100 matched balls in play in FAIR's residuals, with a whole-player bootstrap interval from 0.661 to 0.941. The signal is strongest on weak ground contact and is led by the margin between outs and singles.
+
+This is a descriptive, post-score association rather than a causal estimate. It is not stolen-base value, WAR, or a claim that Sprint Speed should enter FAIR's predictor. Keeping speed outside the model is what makes this residual analysis possible.
 
 <div class="notice">
-  <p><strong>Release boundary.</strong> The canonical GitHub repository and Quarto methods/results site will be linked here once they are public. They—not this overview—will be the source of truth for the model card, reproducible code, complete diagnostics, release label, and aggregate evidence.</p>
+  <p><strong>Release boundary.</strong> The <a href="https://max-gebauer.github.io/fair-xwoba/">published article</a>, <a href="https://max-gebauer.github.io/fair-xwoba/methods.html">technical methods</a>, <a href="https://max-gebauer.github.io/fair-xwoba/reproduce.html">reproduction page</a>, and <a href="https://github.com/Max-Gebauer/fair-xwoba">GitHub repository</a> are the source of truth for the model card, code, complete diagnostics, release files, and evidence hashes.</p>
 </div>

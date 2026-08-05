@@ -6,7 +6,8 @@ eyebrow: Reproducible applied research
 lede: These projects show how I translate conceptual questions into statistical designs—defining the target carefully, separating development from evaluation, and communicating both gains and limitations.
 ---
 
-<div class="project-grid">
+<h2 id="project-case-studies" class="sr-only">Project case studies</h2>
+<div class="project-grid" aria-labelledby="project-case-studies">
   {% assign ordered_projects = site.projects | sort: "featured_order" %}
   {% for project in ordered_projects %}
   <article class="project-card">

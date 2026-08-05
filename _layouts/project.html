@@ -2,7 +2,7 @@
 layout: default
 ---
 <article class="project-page">
-  <header class="project-hero section-shell">
+  <header class="project-hero{% if page.hero_wide %} project-hero--wide{% endif %} section-shell">
     <div class="project-hero__copy">
       <a class="back-link" href="{{ '/projects/' | relative_url }}">← All projects</a>
       <p class="eyebrow">{{ page.status }}</p>
@@ -10,14 +10,20 @@ layout: default
       <p class="project-subtitle">{{ page.subtitle }}</p>
       <p class="page-lede">{{ page.summary }}</p>
       <div class="project-actions">
-        {% if page.canonical_url %}<a class="button" href="{{ page.canonical_url }}">Methods &amp; results</a>{% endif %}
+        {% if page.project_url %}<a class="button" href="{{ page.project_url }}">{{ page.canonical_label | default: "Methods & results" }}</a>{% endif %}
+        {% if page.document_url %}<a class="button" href="{{ page.document_url | relative_url }}">{{ page.document_label | default: "Download PDF" }}</a>{% endif %}
         {% if page.repository_url %}<a class="text-link" href="{{ page.repository_url }}">View repository ↗</a>{% endif %}
+        {% if page.methods_url %}<a class="text-link" href="{{ page.methods_url }}">Technical methods ↗</a>{% endif %}
+        {% if page.reproduce_url %}<a class="text-link" href="{{ page.reproduce_url }}">Reproduce ↗</a>{% endif %}
       </div>
     </div>
     {% if page.hero_image %}
     <figure class="project-hero__figure">
-      <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="720" height="480">
+      {% if page.hero_wide %}<div class="project-hero__scroll" role="region" aria-label="Workflow diagram; scroll horizontally on smaller screens" tabindex="0">{% endif %}
+      <img src="{{ page.hero_image | relative_url }}" alt="{{ page.hero_alt }}" width="{{ page.hero_width | default: 720 }}" height="{{ page.hero_height | default: 480 }}">
+      {% if page.hero_wide %}</div>{% endif %}
       {% if page.hero_caption %}<figcaption>{{ page.hero_caption }}</figcaption>{% endif %}
+      {% if page.hero_wide %}<a class="figure-expand text-link" href="{{ page.hero_image | relative_url }}">Open diagram at full size ↗</a>{% endif %}
     </figure>
     {% endif %}
   </header>

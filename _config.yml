@@ -1,13 +1,16 @@
 locale: en-US
-title: Maximilian J. Gebauer
-name: Maximilian J. Gebauer
-description: Interdisciplinary researcher in philosophy of science, statistics, and data science.
-url: ""
+title: Maximilian (Max) J. Gebauer
+name: Maximilian (Max) J. Gebauer
+description: Transdisciplinary researcher in philosophy of science, statistics, and sports analytics.
+url: "https://max-gebauer.github.io"
 baseurl: ""
-repository: Gebauermj31/max.gebauer.github.io
+repository: Max-Gebauer/max.gebauer.github.io
 theme: null
 email: gebauerm@sas.upenn.edu
-github_username: Gebauermj31
+github_username: Max-Gebauer
+github_url: https://github.com/Max-Gebauer
+linkedin_url: https://www.linkedin.com/in/maximilian-gebauer-6b2a33365/
+penn_profile_url: https://philosophy.sas.upenn.edu/people/maximilian-gebauer
 
 markdown: kramdown
 highlighter: rouge
@@ -69,16 +72,20 @@ sass:
   style: compressed
 
 author:
-  name: Maximilian J. Gebauer
+  name: Maximilian (Max) J. Gebauer
   email: gebauerm@sas.upenn.edu
   location: Philadelphia, Pennsylvania
   affiliation: University of Pennsylvania
-  github: https://github.com/Gebauermj31
+  github: https://github.com/Max-Gebauer
+  linkedin: https://www.linkedin.com/in/maximilian-gebauer-6b2a33365/
+  penn_profile: https://philosophy.sas.upenn.edu/people/maximilian-gebauer
 
 social:
-  name: Maximilian J. Gebauer
+  name: Maximilian (Max) J. Gebauer
   links:
-    - https://github.com/Gebauermj31
+    - https://github.com/Max-Gebauer
+    - https://www.linkedin.com/in/maximilian-gebauer-6b2a33365/
+    - https://philosophy.sas.upenn.edu/people/maximilian-gebauer
 
 logo: /assets/images/mg-monogram.svg
 og_image: /assets/images/social-card.svg

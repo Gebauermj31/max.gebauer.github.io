@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="400" viewBox="0 0 640 400" role="img" aria-labelledby="t d">
-  <title id="t">Dynamic NFL ratings</title><desc id="d">Two opposing players connected across a sequence of time-indexed matchups.</desc>
+  <title id="t">Opponent-adjusted NFL ratings</title><desc id="d">Two opposing players connected across a sequence of time-indexed matchups.</desc>
   <rect width="640" height="400" fill="#eef4fc"/>
   <path d="M80 80h480M80 200h480M80 320h480" stroke="#c8d5e7" stroke-width="2" stroke-dasharray="7 8"/>
   <path d="M120 320C190 270 208 122 302 124s92 154 208 76" fill="none" stroke="#075fd8" stroke-width="7"/>

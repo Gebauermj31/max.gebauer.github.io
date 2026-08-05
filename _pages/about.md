@@ -1,31 +1,44 @@
 ---
-title: Maximilian J. Gebauer
+title: Maximilian (Max) J. Gebauer
 layout: home
 permalink: /
-description: Interdisciplinary researcher in philosophy of science, statistics, and data science at the University of Pennsylvania.
+description: Transdisciplinary researcher in philosophy of science, statistics, and sports analytics at the University of Pennsylvania.
 ---
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero__inner">
     <div class="hero__copy">
-      <p class="eyebrow">University of Pennsylvania · Philadelphia</p>
-      <h1 id="hero-title">Interdisciplinary researcher in philosophy of science, statistics, and data science.</h1>
-      <p class="hero__lede">I study how statistical methods encode judgments about evidence, uncertainty, and consequence—and I build reproducible models for difficult applied problems in sports, climate, and health.</p>
+      <p class="eyebrow">PhD candidate in Philosophy · University of Pennsylvania</p>
+      <h1 id="hero-title">Transdisciplinary researcher in philosophy of science, statistics, and sports analytics.</h1>
+      <p class="hero__lede">I study how values, institutions, and modeling choices shape scientific inference—and build statistical models for concrete problems in sports, public health, and scientific practice.</p>
       <div class="hero__actions">
         <a class="button" href="{{ '/research/' | relative_url }}">Explore research</a>
         <div class="hero__links" aria-label="Additional links">
           <a class="text-link" href="{{ '/cv/' | relative_url }}">CV</a>
+          <a class="text-link" href="{{ site.penn_profile_url }}">Penn profile ↗</a>
           <a class="text-link" href="mailto:{{ site.email }}">Penn email</a>
-          <a class="text-link" href="https://github.com/{{ site.github_username }}">GitHub ↗</a>
+          <a class="text-link" href="{{ site.github_url }}">GitHub ↗</a>
+          <a class="text-link" href="{{ site.linkedin_url }}">LinkedIn ↗</a>
         </div>
       </div>
     </div>
-    <div class="hero__portrait">
+    <div class="hero__media">
       <picture>
-        <source srcset="{{ '/assets/images/maximilian-gebauer-headshot-960.webp' | relative_url }}" type="image/webp">
-        <img src="{{ '/assets/images/maximilian-gebauer-headshot-960.jpg' | relative_url }}" alt="Portrait of Maximilian Gebauer" width="960" height="1052" fetchpriority="high">
+        <source
+          type="image/webp"
+          srcset="{{ '/assets/images/photos/st-john-silk-cotton-tree-2026-800.webp' | relative_url }} 800w, {{ '/assets/images/photos/st-john-silk-cotton-tree-2026-1600.webp' | relative_url }} 1600w"
+          sizes="(max-width: 900px) 100vw, 42vw">
+        <img
+          src="{{ '/assets/images/photos/st-john-silk-cotton-tree-2026-800.jpg' | relative_url }}"
+          srcset="{{ '/assets/images/photos/st-john-silk-cotton-tree-2026-800.jpg' | relative_url }} 800w, {{ '/assets/images/photos/st-john-silk-cotton-tree-2026-1600.jpg' | relative_url }} 1600w"
+          sizes="(max-width: 900px) 100vw, 42vw"
+          alt="Max Gebauer standing beside the broad, buttressed trunk of a silk-cotton tree in a tropical forest"
+          width="1600"
+          height="1200"
+          fetchpriority="high"
+          decoding="async">
       </picture>
-      <span class="portrait-note">Maximilian J. Gebauer · Philadelphia</span>
+      <span class="hero__photo-note">Silk-cotton tree · St. John, U.S. Virgin Islands · 2026</span>
     </div>
   </div>
 </section>
@@ -36,23 +49,23 @@ description: Interdisciplinary researcher in philosophy of science, statistics, 
         <p class="eyebrow">Research program</p>
         <h2 id="research-heading">Ideas, methods, applications.</h2>
       </div>
-      <p>My work moves between foundational questions about scientific inference and the practical design of statistical models. Each part informs the others.</p>
+      <p>The questions I care about are larger than any one toolkit. Philosophical argument, institutional analysis, and statistical modeling each illuminate a different part of the problem.</p>
     </div>
     <div class="pillar-grid">
       <article class="pillar">
         <span class="pillar__number">01</span>
-        <h3>Philosophy of science &amp; Bayesianism</h3>
-        <p>How values, modeling choices, and decision contexts shape scientific inference—even within formally Bayesian practice.</p>
+        <h3>Values, Bayesianism &amp; scientific practice</h3>
+        <p>Whether applied Bayesian inference can avoid inductive risk, where values enter scientific practice, and how institutions shape the production of knowledge.</p>
       </article>
       <article class="pillar">
         <span class="pillar__number">02</span>
-        <h3>Statistical methodology</h3>
-        <p>Methods for estimation, validation, and uncertainty that are technically rigorous and honest about their operating conditions.</p>
+        <h3>Statistical inference in practice</h3>
+        <p>High-dimensional control selection, spatial confounding, partial pooling, and validation designs grounded in how scientific fields actually use statistics.</p>
       </article>
       <article class="pillar">
         <span class="pillar__number">03</span>
-        <h3>Applied modeling</h3>
-        <p>Reproducible work in sports, climate, and health where measurement, prediction, and decision-making meet.</p>
+        <h3>Applied sports &amp; health modeling</h3>
+        <p>Matchup-adjusted ratings, expected-outcome models, and public-health research where prediction, interpretation, and decision-making must work together.</p>
       </article>
     </div>
   </div>
@@ -84,13 +97,50 @@ description: Interdisciplinary researcher in philosophy of science, statistics, 
   </div>
 </section>
 
+<section class="home-section home-section--photos" aria-labelledby="photos-heading">
+  <div class="section-shell">
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">Places and people</p>
+        <h2 id="photos-heading">A wider frame.</h2>
+      </div>
+      <p>Research is part of a life, not a substitute for one. These photographs capture some of the people and places around mine.</p>
+    </div>
+    <p class="personal-note">Away from the desk, I follow the NFL, college football, and baseball; cook at home and have explored more than 200 Philadelphia restaurants; track prediction markets; and bring an almost comically experimental mindset to blind tastings from my American whiskey collection. My cats, Whiskey and Coco, and my dog, Bella, keep the rest of the household grounded.</p>
+    <div class="photo-grid">
+      {% for photo in site.data.photos %}
+      <figure class="photo-card photo-card--{{ photo.layout }}">
+        <div class="photo-card__frame">
+          <picture>
+            <source
+              type="image/webp"
+              srcset="{{ photo.image | append: '-800.webp' | relative_url }} 800w, {{ photo.image | append: '-1600.webp' | relative_url }} 1600w"
+              sizes="{% if photo.layout == 'wide' %}(max-width: 720px) calc(100vw - 2.5rem), (max-width: 900px) calc(100vw - 2.5rem), 800px{% else %}(max-width: 720px) calc(100vw - 2.5rem), 400px{% endif %}">
+            <img
+              src="{{ photo.image | append: '-800.jpg' | relative_url }}"
+              srcset="{{ photo.image | append: '-800.jpg' | relative_url }} 800w, {{ photo.image | append: '-1600.jpg' | relative_url }} 1600w"
+              sizes="{% if photo.layout == 'wide' %}(max-width: 720px) calc(100vw - 2.5rem), (max-width: 900px) calc(100vw - 2.5rem), 800px{% else %}(max-width: 720px) calc(100vw - 2.5rem), 400px{% endif %}"
+              alt="{{ photo.alt }}"
+              width="{{ photo.width }}"
+              height="{{ photo.height }}"
+              loading="lazy"
+              decoding="async">
+          </picture>
+        </div>
+        <figcaption>{{ photo.caption }} <span class="photo-card__credit">{{ photo.credit }}</span></figcaption>
+      </figure>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
 <section class="home-section">
   <div class="section-shell">
     <div class="home-callout">
       <div>
         <p class="eyebrow">Current work</p>
         <h2>Research grounded in uncertainty.</h2>
-        <p>I am a PhD candidate in Philosophy and earned an M.A. in Statistics &amp; Data Science at Penn. I welcome conversations across disciplinary boundaries.</p>
+        <p>I am a PhD candidate in Philosophy and earned an M.A. in Statistics &amp; Data Science at Penn. I welcome conversations that cross disciplinary boundaries while staying grounded in concrete problems.</p>
       </div>
       <a class="button" href="mailto:{{ site.email }}">Start a conversation</a>
     </div>

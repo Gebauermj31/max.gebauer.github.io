@@ -1,9 +1,10 @@
 ---
-title: Maximilian J. Gebauer
+title: Maximilian (Max) J. Gebauer
 layout: cv
 permalink: /cv/
 section: CV
 description: Academic curriculum vitae for Maximilian J. Gebauer.
+updated: August 5, 2026
 ---
 
 ## Education
@@ -16,9 +17,15 @@ description: Academic curriculum vitae for Maximilian J. Gebauer.
 
 <div class="cv-item"><div><h3>University of Oxford, Mansfield College</h3><p>Visiting Student Programme</p></div><div class="cv-date">Fall 2020–Summer 2021</div></div>
 
-## Publication
+## Forthcoming publication
 
 <div class="cv-item"><div><h3>“Bayesian Practice and the Persistence of Inductive Risk”</h3><p><em>Philosophy of Science</em>, forthcoming.</p></div><div class="cv-date">Forthcoming</div></div>
+
+## Working papers
+
+<div class="cv-item"><div><h3>“Opponent-Adjusted Evaluation of NFL Pass Blocking and Pass Rushing Performance”</h3><p>Jonathan Pipping-Gamón, Maximilian J. Gebauer, Victoria Lee, Kenny Watts, and Abraham J. Wyner.</p><p>Interpretable ridge-regularized Bradley-Terry models for player-level pass-blocking and pass-rushing evaluation using opponent-dependent tracking interactions.</p><p><a href="https://arxiv.org/abs/2604.01491">arXiv preprint ↗</a> · <a href="https://github.com/WhartonSABI/nfl-elo">Repository ↗</a></p></div><div class="cv-date">Revisions</div></div>
+
+<div class="cv-item"><div><h3>FAIR xwOBA</h3><p>Maximilian J. Gebauer.</p><p>A player-trait-free model of expected weighted on-base average in Major League Baseball that outperformed the declared Statcast comparators across six rolling held-out development seasons and supports new analysis of the game value associated with Sprint Speed.</p><p><a href="https://max-gebauer.github.io/fair-xwoba/">Published article and results ↗</a> · <a href="https://github.com/Max-Gebauer/fair-xwoba">Repository ↗</a></p></div><div class="cv-date">Public release<br>Aug. 2026</div></div>
 
 ## Research &amp; professional experience
 
@@ -28,9 +35,13 @@ description: Academic curriculum vitae for Maximilian J. Gebauer.
 <div class="cv-item"><div><h3>Intern, Center for Ethics and the Rule of Law</h3><p>Coauthored white papers combining quantitative and qualitative analysis of proposed FISA Section 702 reforms.</p></div><div class="cv-date">June–Aug. 2023</div></div>
 <div class="cv-item"><div><h3>Intern, U.S. Federal District Court</h3><p>Produced analytical research for legal–academic partnerships.</p></div><div class="cv-date">May–Oct. 2020</div></div>
 
-## University teaching
+## Teaching experience
 
-<div class="cv-item"><div><h3>Instructor and Teaching Assistant, University of Pennsylvania</h3><p>Instructor for Philosophy of Science and Introduction to Statistics. Teaching-assistant portfolio: Philosophy of Science, Logic, Bioethics, Philosophy of Climate Science, Modern Data Mining, Applied Bayesian Modeling, Applied Regression Analysis, and Introduction to Statistics in Health Policy.</p></div><div class="cv-date">2023–present</div></div>
+<div class="cv-item"><div><h3>Instructor and Teaching Assistant, University of Pennsylvania</h3><p>Instructor of record for Philosophy of Science and Introductory Statistics. Teaching-assistant portfolio: Philosophy of Science, Introduction to Logic, Bioethics, Saving the Planet: Tools for the Climate Emergency, Modern Data Mining, Applied Bayesian Modeling, Applied Regression Analysis for Health Policy Research, and Introduction to Statistics for Health Policy.</p></div><div class="cv-date">2023–present</div></div>
+
+<div class="cv-item"><div><h3>Teaching Fellow, Wharton Data Science Academy</h3><p>Taught high school students in an intensive summer program; delivered lectures on neural networks and ensemble methods, advised student projects, and supported assignments.</p></div><div class="cv-date">Summer 2026</div></div>
+
+<div class="cv-item"><div><h3>Teaching Assistant, Wharton Moneyball Academy</h3><p>Advised high school student projects in sports statistics and provided coding and analytical support in the Philadelphia and San Francisco programs.</p></div><div class="cv-date">Summer 2025</div></div>
 
 ## Selected talks
 
