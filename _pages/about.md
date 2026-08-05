@@ -44,23 +44,19 @@ description: Transdisciplinary researcher in philosophy of science, statistics, 
 </section>
 <section class="home-section" aria-labelledby="research-heading">
   <div class="section-shell">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Research program</p>
-        <h2 id="research-heading">Ideas, methods, applications.</h2>
-      </div>
-      <p>The questions I care about are larger than any one toolkit. Philosophical argument, institutional analysis, and statistical modeling each illuminate a different part of the problem.</p>
+    <div class="section-heading section-heading--solo">
+      <h2 id="research-heading">Research Program</h2>
     </div>
     <div class="pillar-grid">
       <article class="pillar">
         <span class="pillar__number">01</span>
         <h3>Values, Bayesianism &amp; scientific practice</h3>
-        <p>Whether applied Bayesian inference can avoid inductive risk, where values enter scientific practice, and how institutions shape the production of knowledge.</p>
+        <p>Whether applied Bayesian inference can avoid inductive risk, where values enter scientific practice, and whether Bayesianism can remain value-free in the relevant sense.</p>
       </article>
       <article class="pillar">
         <span class="pillar__number">02</span>
-        <h3>Statistical inference in practice</h3>
-        <p>High-dimensional control selection, spatial confounding, partial pooling, and validation designs grounded in how scientific fields actually use statistics.</p>
+        <h3>Scientific integrity &amp; institutional design</h3>
+        <p>How institutions police plagiarism, p-hacking, and other academic misconduct—and how enforcement can protect inquiry without allowing accusations to be weaponized against scholars because of identity or political viewpoint.</p>
       </article>
       <article class="pillar">
         <span class="pillar__number">03</span>
@@ -73,12 +69,8 @@ description: Transdisciplinary researcher in philosophy of science, statistics, 
 
 <section class="home-section home-section--tint" aria-labelledby="projects-heading">
   <div class="section-shell">
-    <div class="section-heading">
-      <div>
-        <p class="eyebrow">Flagship projects</p>
-        <h2 id="projects-heading">Three questions in motion.</h2>
-      </div>
-      <p>Each case study connects a substantive problem to careful model design, validation, and communication.</p>
+    <div class="section-heading section-heading--solo">
+      <h2 id="projects-heading">Flagship Statistics &amp; Analytics Projects</h2>
     </div>
     <div class="project-grid">
       {% assign featured_projects = site.projects | sort: "featured_order" %}
@@ -99,12 +91,11 @@ description: Transdisciplinary researcher in philosophy of science, statistics, 
 
 <section class="home-section home-section--photos" aria-labelledby="photos-heading">
   <div class="section-shell">
-    <div class="section-heading">
+    <div class="section-heading section-heading--solo">
       <div>
         <p class="eyebrow">Places and people</p>
         <h2 id="photos-heading">A wider frame.</h2>
       </div>
-      <p>Research is part of a life, not a substitute for one. These photographs capture some of the people and places around mine.</p>
     </div>
     <p class="personal-note">Away from the desk, I follow the NFL, college football, and baseball; cook at home and have explored more than 200 Philadelphia restaurants; track prediction markets; and bring an almost comically experimental mindset to blind tastings from my American whiskey collection. My cats, Whiskey and Coco, and my dog, Bella, keep the rest of the household grounded.</p>
     <div class="photo-grid">

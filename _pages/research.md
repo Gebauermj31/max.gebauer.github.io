@@ -27,9 +27,13 @@ lede: My research is transdisciplinary because the questions I care about exceed
 
 ## Current directions
 
+### Bayesianism, values, and inductive risk
+
+I investigate whether Bayesianism, treated as an applied practice of scientific inference rather than only an ideal theory of graded belief, can avoid arguments from inductive risk or remain value-free in the relevant sense. My forthcoming paper analyzes how choices about ambiguous data, priors and hyperpriors, computational diagnostics, and model comparison can predictably shape posterior claims; ongoing work extends that analysis to the broader statistical and institutional practices through which Bayesian results are produced, checked, and used.
+
 ### Scientific integrity as an institutional problem
 
-I am developing a research program on the epistemic effects of how universities and scholarly communities police plagiarism, p-hacking, and other forms of academic misconduct. The project asks how enforcement systems can protect research integrity while avoiding evidentiary and procedural structures that allow accusations to be weaponized against scholars on the basis of identity or political viewpoint. Planned formal work includes probabilistic and agent-based models of reporting, enforcement, and incentives, paired with an institutional-design analysis. The agent-based modeling is a future stage of the project, not a completed result.
+I investigate the epistemic effects of how universities and scholarly communities police plagiarism, p-hacking, and other forms of academic misconduct. The project asks how enforcement systems can protect research integrity while avoiding evidentiary and procedural structures that allow accusations to be weaponized against scholars on the basis of identity or political viewpoint. Planned formal work includes probabilistic and agent-based models of reporting, enforcement, and incentives, paired with an institutional-design analysis. The agent-based modeling is a future stage of the project, not a completed result.
 
 ### Models for player evaluation and availability
 
@@ -53,7 +57,7 @@ My statistics thesis studies data-driven control selection in spatial epidemiolo
   <a class="text-link" href="{{ '/research/bayesian-practice-and-the-persistence-of-inductive-risk/' | relative_url }}">Read the accessible overview →</a>
 </article>
 
-## Selected talks
+## Selected talks, presentations, and invited lectures
 
 <div class="talk-grid">
   <article class="talk-card"><time datetime="2025">2025</time><h3>Approximating Posterior Distributions with Variational Bayes</h3><p>A methodological talk on scalable Bayesian approximation and the inferential tradeoffs it introduces.</p></article>

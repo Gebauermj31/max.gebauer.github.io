@@ -27,7 +27,7 @@ document_url: /files/approved-project-document.pdf
 document_label: Download the full report
 release_label: v1.0
 release_date: 2026-08-03
-section: Projects
+section: Statistics Projects
 ---
 ```
 

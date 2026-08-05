@@ -16,7 +16,7 @@ hero_alt: Conceptual workflow from county-level candidate controls through doubl
 hero_caption: Original conceptual workflow based on the thesis design. The approved empirical maps and distributions below come from the M.A. thesis.
 document_url: /files/maximilian-gebauer-statistics-thesis.pdf
 document_label: Download the thesis PDF
-section: Projects
+section: Statistics Projects
 ---
 
 ## The problem
