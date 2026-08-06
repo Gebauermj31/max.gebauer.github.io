@@ -97,7 +97,7 @@ description: Transdisciplinary researcher in philosophy of science, statistics, 
         <h2 id="photos-heading">A wider frame.</h2>
       </div>
     </div>
-    <p class="personal-note">Away from the desk, I follow the NFL, college football, and baseball; cook at home and have explored more than 200 Philadelphia restaurants; track prediction markets; and bring an almost comically experimental mindset to blind tastings from my American whiskey collection. My cats, Whiskey and Coco, and my dog, Bella, keep the rest of the household grounded.</p>
+    <p class="personal-note">Away from the desk, I follow the NFL, college football, and baseball; cook at home and have explored more than 200 Philadelphia restaurants; track prediction markets; and bring an almost comically experimental mindset to blind tastings from my American whiskey collection.</p>
     <div class="photo-grid">
       {% for photo in site.data.photos %}
       <figure class="photo-card photo-card--{{ photo.layout }}">
