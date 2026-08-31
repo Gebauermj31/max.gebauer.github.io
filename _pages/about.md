@@ -9,7 +9,7 @@ description: Transdisciplinary researcher in philosophy of science, statistics, 
   <div class="hero__inner">
     <div class="hero__copy">
       <p class="eyebrow">PhD candidate in Philosophy · University of Pennsylvania</p>
-      <h1 id="hero-title">Transdisciplinary researcher in philosophy of science, statistics, and sports analytics.</h1>
+      <h1 id="hero-title">Researcher in philosophy of science, statistics, and sports analytics.</h1>
       <p class="hero__lede">I study how values, institutions, and modeling choices shape scientific inference—and build statistical models for concrete problems in sports, public health, and scientific practice.</p>
       <div class="hero__actions">
         <a class="button" href="{{ '/research/' | relative_url }}">Explore research</a>
